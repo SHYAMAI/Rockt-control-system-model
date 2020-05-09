@@ -1,0 +1,21 @@
+Python Program For Linear Regression:
+from scipy import stats
+import numpy as np
+x = np.array([0,1,3,20,22])   # THRUST
+y = np.array([5,5,10,12,50])  # MASS
+slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+import matplotlib.pyplot as plt 
+print ("intercept",intercept)   # Intercepts value
+print ('slope=' ,slope)             #Slope
+print ("std:",std_err)              #Std error
+plt.xlabel("THRUST")
+plt.ylabel("MASS")
+plt.plot(x,y)
+plt.show() 
+
+
+OUTPUT:
+
+('intercept', 4.2727272727272751)
+('slope=', 1.3181818181818179)
+('std:', 0.66847127089682623)
