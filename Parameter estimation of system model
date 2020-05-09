@@ -1,0 +1,22 @@
+Python Program For Control System Program:
+
+from control import*
+import numpy as np
+import matplotlib.pyplot as plt
+from control.pzmap import pzmap
+for i in  range (0,50,1):   # i considered as a mass , 2 is a drag coeff
+    g=tf(1,[i,2])
+    u=20
+    k=np.linspace(0,100)
+t,y,x=forced_response(g,k,u)
+plt.subplot(211)
+plt.xlabel("THRUST")
+plt.ylabel("TIME")
+plt.plot(k)
+plt.show()
+plt.subplot(222)
+plt.xlabel("TIME")
+plt.ylabel("MASS")
+plt.plot(t,y)
+plt.show()
+
