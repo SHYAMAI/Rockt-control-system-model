@@ -1,0 +1,11 @@
+Python Program for Pole zero plot : 
+
+from control import *
+import matplotlib.pyplot as plt
+
+from control.pzmap import pzmap
+
+g=tf([1],[500,2])
+
+poles,zeros=pzmap(g),plt.show()
+
